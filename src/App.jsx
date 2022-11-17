@@ -1,17 +1,20 @@
 import { YellowCounterProvider } from 'context/YellowCounterProvider'
 import { Route, Routes } from 'react-router-dom'
-// import Home from 'pages/Home'
 import './App.module.scss'
-import { lazy } from 'react'
+import { lazy, Suspense } from 'react'
 
 const Home = lazy(() => import('pages/Home'))
+const Dashboard = lazy(() => import('pages/Dashboard'))
 
 const App = () => {
   return (
     <YellowCounterProvider>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+      <Suspense fallback={<div>loading</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="dashboard" element={<Dashboard />} />
+        </Routes>
+      </Suspense>
     </YellowCounterProvider>
   )
 }

@@ -1,21 +1,28 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import styles from './Home.module.scss'
-import reactLogo from 'assets/icons/react.svg'
+import { ReactComponent as ReactLogo } from 'assets/icons/react.svg'
+import { Link } from 'react-router-dom'
 
 const Home = ({}) => {
   return (
-    <div>
+    <Suspense fallback={<div>Home is loading</div>}>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className={styles.logo} alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className={styles.logo + ' react'} alt="React logo" />
-        </a>
+        <div>
+          <a href="https://vitejs.dev" target="_blank">
+            <img src="/vite.svg" className={styles.logo} alt="Vite logo" />
+          </a>
+          <a href="https://reactjs.org" target="_blank">
+            <div className={styles.logo__react}>
+              <ReactLogo width="20px" height="20px" fill="red" />
+            </div>
+          </a>
+        </div>
+        <Link to="/dashboard">
+          <h1>Etheric React Boilerplate</h1>
+        </Link>
+        <p className={styles.read__the__docs}>Click on the Vite and React logos to learn more</p>
       </div>
-      <h1>Etheric React Boilerplate</h1>
-      <p className={styles.read__the__docs}>Click on the Vite and React logos to learn more</p>
-    </div>
+    </Suspense>
   )
 }
 
