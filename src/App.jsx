@@ -1,18 +1,17 @@
-import reactLogo from 'assets/icons/react.svg'
-import './App.module.scss'
-import useCounter from 'hooks/useCounter'
-import Component from 'components/Component/Component'
-import styles from './App.module.scss'
 import { YellowCounterProvider } from 'context/YellowCounterProvider'
 import { Route, Routes } from 'react-router-dom'
-import Home from 'pages/Home';
+// import Home from 'pages/Home'
+import './App.module.scss'
+import { lazy } from 'react'
 
-// const Home = await import('pages/Home')
+const Home = lazy(() => import('pages/Home'))
 
 const App = () => {
   return (
     <YellowCounterProvider>
-      <Home/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </YellowCounterProvider>
   )
 }

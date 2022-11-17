@@ -6,6 +6,6 @@ const call = async () => {
     const responseRaw = await fetch(endpoint)
     return await responseRaw.json()
   } catch (e) {
-    console.log(e);
+    console.log(e)
   }
 }

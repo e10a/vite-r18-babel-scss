@@ -1,12 +1,8 @@
-import React from 'react';
-import styles from './Component.module.scss';
+import React from 'react'
+import styles from './Component.module.scss'
 
 const Component = ({}) => {
-  return (
-    <div>
+  return <div></div>
+}
 
-    </div>
-  );
-};
-
-export default Component;
+export default Component
