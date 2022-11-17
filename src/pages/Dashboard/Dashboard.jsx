@@ -4,13 +4,10 @@ import { animateSection } from 'hooks/animations/useAnimationExample/animateSect
 import { Link } from 'react-router-dom'
 
 const Dashboard = ({}) => {
-
-  const newsSection = animateSection()
   return (
     <Suspense fallback={<div>Dashboard is loading</div>}>
-      <img/>
       <Link to="/">
-        <button ref={newsSection}>
+        <button>
           Hello
         </button>
       </Link>

@@ -18,7 +18,7 @@ const Home = ({}) => {
           </a>
         </div>
         <Link to="/dashboard">
-          <h1>Etheric React Boilerplate</h1>
+          <h1 className={styles.navigate}>Etheric React Boilerplate</h1>
         </Link>
         <p className={styles.read__the__docs}>Click on the Vite and React logos to learn more</p>
       </div>
