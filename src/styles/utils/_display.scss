@@ -1,0 +1,23 @@
+// display content on different bp
+
+.is-desktop {
+    @include mq($until: desktop) {
+        display: none;
+    }
+}
+.is-notebook {
+    @include mq($until: notebook) {
+        display: none;
+    }
+}
+
+.is-tablet {
+    @include mq($until: tablet) {
+        display: none;
+    }
+}
+.is-mobile {
+    @include mq(tablet) {
+        display: none;
+    }
+}

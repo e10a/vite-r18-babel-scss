@@ -1,0 +1,12 @@
+@use 'sass:map';
+@use 'sass:math';
+
+// Variables
+@import './variables';
+
+
+// convert px values to rem
+@function toRem($pxValue, $base: 16) {
+  $remValue: math.div($pxValue, $base) + rem;
+  @return $remValue;
+}
