@@ -1,6 +1,5 @@
 .button {
     $block: &;
-    @include button;
 
     cursor: pointer;
     display: inline-flex;
@@ -13,7 +12,7 @@
     transition: $transition-link;
     padding: 22px 20px;
 
-    @include mq(hd) {
+    @include mq(page) {
         padding: 26px 20px;
     }
 
