@@ -174,6 +174,7 @@ Now that the most basic things are set up, we can start to style the building bl
 Mostly without classes, we are now redefining the basic browser styles of headlines, buttons, links, lists, etc. and can make sure that all components in our design are using the same consistent base.
 
 ### Utils
+
 The tools folder is where your global Sass mixins, functions and variables.
 
 Maybe you want to manipulate colors with blend modes or set the aspect ratio for a video container? Or clear your float, for example.
@@ -185,6 +186,7 @@ To create new util, please use the corresponding file.
 Place here any vendor scss file you downloaded from the internet or library.
 
 Import it in global.scss
+
 ### Media Queries
 
 A `sass-mq` library is used to generate media query mixins. The breakpoints are defined in `_variables.scss`, in the `$mq-breakpoints` object. Media queries use mobile-first approach. Check [sass-mq documentation](https://github.com/sass-mq/sass-mq) for more info.
