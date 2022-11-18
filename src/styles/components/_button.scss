@@ -32,15 +32,6 @@
     }
 
     &--style {
-        &--grey {
-            background-color: $color-grey-dark;
-            color: $color-white;
-            
-
-            .no-touch &:hover {
-                background-color: darken($color-grey-dark, 10%);
-            }
-        }
         &--black {
             background-color: $color-black;
             color: white;
@@ -52,41 +43,11 @@
         &--white {
             background-color: $color-white;
             color: black;
-
-            // .no-touch &:hover {
-            //     background-color: darken($color-white, 10%);
-            // }
         }
 
-        &--outline {
-            background-color: transparent;
-            color: $color-white;
-            border: 1px solid #ffffff;
-            backdrop-filter: blur(80px);
 
-            .no-touch &:hover {
-                background-color: darken(transparent, 10%);
-            }
-        }
     }
 
-    &--size {
-        &--x-small {
-            width: toRem(100);
-        }
-
-        &--small {
-            width: toRem(160);
-        }
-
-        &--medium {
-            width: toRem(290);
-        }
-
-        &--big {
-            width: toRem(400);
-        }
-    }
 
     &__inner {
         display: flex;
