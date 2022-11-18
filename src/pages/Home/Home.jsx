@@ -4,7 +4,7 @@ import { ReactComponent as ReactLogo } from 'assets/icons/react.svg'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
-const Home = ({}) => {
+const Home = () => {
   return (
     <Suspense fallback={<div>Home is loading</div>}>
       <motion.div
@@ -14,10 +14,10 @@ const Home = ({}) => {
         exit={{ opacity: 0, transition: { duration: 0.5 } }}
       >
         <div>
-          <a href="https://vitejs.dev" target="_blank">
+          <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
             <img src="/vite.svg" className={styles.logo} alt="Vite logo" />
           </a>
-          <a href="https://reactjs.org" target="_blank">
+          <a href="https://reactjs.org" target="_blank" rel="noreferrer">
             <div className={styles.logo__react}>
               <ReactLogo width="20px" height="20px" fill="red" />
             </div>
