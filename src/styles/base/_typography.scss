@@ -1,27 +1,29 @@
-body,
-input,
-select,
-textarea,
-button {
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+
+    ::selection {
+        color: blue; /* WebKit/Blink Browsers */
+    }
+    ::-moz-selection {
+        color: blue; /* Gecko Browsers */
+    }
+}
+
+// Default text styles
+// -----------------------------------------------------------------------------
+body {
     font-family: $font-family;
     font-size: $font-size-base;
     line-height: $line-height;
     color: $color-black;
 
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-
-    ::selection {
-        color: #ffb7b7; /* WebKit/Blink Browsers */
-    }
-    ::-moz-selection {
-        color: #ffb7b7; /* Gecko Browsers */
-    }
 }
 
 a {
-    color: $color-white;
     text-decoration: none;
 }
 
@@ -85,4 +87,25 @@ a {
 
 @mixin subline {
     @include copy;
+}
+
+
+
+.h1 {
+    @include h1;
+}
+
+.h2 {
+    @include h2;
+}
+.h3 {
+    @include h3;
+}
+
+.copy {
+    @include copy;
+}
+
+.subline {
+    @include subline;
 }

@@ -1,0 +1,25 @@
+// basic
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='date'],
+select,
+textarea {
+    box-shadow: none;
+    appearance: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px !important;
+    margin: 0 !important;
+
+
+    &::placeholder {
+        color: $color-beer-black;
+        opacity: 0.4;
+        transition: opacity $link-transition;
+        font-family: $font-family !important;
+    }
+}
+
+

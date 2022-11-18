@@ -1,21 +1,32 @@
-// BASIC
-@import 'mixins/to-rem';
-@import 'variables';
-@import 'common';
-@import 'reset';
+@use 'sass:math';
+@use 'sass:list';
 
-// MIXINS
-@import 'mixins/center';
-@import 'mixins/ellipsis';
-@import 'mixins/fillout';
-@import 'mixins/placeholder';
-@import 'mixins/object-fit';
+// Vendors
+// -----------------------------------------------------------------------------
+@import 'sass-mq';
 
-// UTILS
-@import 'utils/general';
-@import 'utils/branded-list';
-@import 'utils/fonts';
-@import 'utils/typography';
-@import 'utils/section';
-@import 'utils/scrollbar';
 
+// Variables
+// -----------------------------------------------------------------------------
+@import 'utils/variables';
+
+
+// Utils
+// -----------------------------------------------------------------------------
+@import 'utils/breakpoints';
+@import 'utils/functions';
+@import 'utils/mixins';
+@import 'utils/transitions';
+@import 'utils/utilities';
+@import 'utils/display';
+
+
+// Base
+// -----------------------------------------------------------------------------
+@import 'base/fonts';
+@import 'base/reset';
+@import 'base/base';
+@import 'base/typography';
+
+// Components
+// -----------------------------------------------------------------------------
