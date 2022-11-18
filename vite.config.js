@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 import mkcert from 'vite-plugin-mkcert'
 import svgr from 'vite-plugin-svgr'
 import path from 'path'
-import { dependencies } from './package.json';
+import { dependencies } from './package.json'
 
 export default (args) => {
   console.log(args)
@@ -54,10 +54,10 @@ export default (args) => {
 }
 
 function renderChunks(deps) {
-  let chunks = {};
+  let chunks = {}
   Object.keys(deps).forEach((key) => {
-    if (['react', 'react-router-dom', 'react-dom'].includes(key)) return;
-    chunks[key] = [key];
-  });
-  return chunks;
+    if (['react', 'react-router-dom', 'react-dom'].includes(key)) return
+    chunks[key] = [key]
+  })
+  return chunks
 }
