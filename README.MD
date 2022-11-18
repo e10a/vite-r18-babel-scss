@@ -157,11 +157,35 @@ Boilerplate use [Sass](https://sass-lang.com/) as an CSS Preprocessor.
 
 Entrypoint by default: `./src/styles/global.scss`.
 
-Global Styles are written in .scss file format. Do not import thinks directly from styles folder, it is injected at the whole pages
+Global Styles are written in .scss file format. Do not import things directly from styles folder, it is injected at the whole pages
 
-Pages and component styles are written in .module.scss format
+Pages and react component styles are written in .module.scss format
 
-## Media Queries
+### Base
+
+Just like in ITCSS, the generic folder is the first one that actually produces CSS.
+
+It contains global box-sizing rules, CSS resets, or print styles – anything that should be set right at the beginning of your CSS but isn’t yet project-specific.
+
+### Components
+
+Now that the most basic things are set up, we can start to style the building blocks of our front-end: Raw HTML Elements.
+
+Mostly without classes, we are now redefining the basic browser styles of headlines, buttons, links, lists, etc. and can make sure that all components in our design are using the same consistent base.
+
+### Utils
+The tools folder is where your global Sass mixins, functions and variables.
+
+Maybe you want to manipulate colors with blend modes or set the aspect ratio for a video container? Or clear your float, for example.
+
+To create new util, please use the corresponding file.
+
+### Vendors
+
+Place here any vendor scss file you downloaded from the internet or library.
+
+Import it in global.scss
+### Media Queries
 
 A `sass-mq` library is used to generate media query mixins. The breakpoints are defined in `_variables.scss`, in the `$mq-breakpoints` object. Media queries use mobile-first approach. Check [sass-mq documentation](https://github.com/sass-mq/sass-mq) for more info.
 
