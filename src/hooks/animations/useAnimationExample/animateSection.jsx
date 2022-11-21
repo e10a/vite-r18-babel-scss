@@ -5,9 +5,7 @@ import { gsap } from 'gsap'
 export const animateSection = (playImmediately) => {
   const tl = useTimeline()
 
-  const app2 = useRef();
-
-
+  const app2 = useRef()
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {

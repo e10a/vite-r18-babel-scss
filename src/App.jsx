@@ -1,7 +1,7 @@
 import { YellowCounterProvider } from 'context/YellowCounterProvider'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import './App.module.scss'
-import { lazy, Suspense } from 'react'
+import React, { lazy, Suspense } from 'react'
 import { AnimatePresence } from 'framer-motion'
 
 const Home = lazy(() => import('pages/Home'))

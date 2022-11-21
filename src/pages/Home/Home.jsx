@@ -3,10 +3,8 @@ import styles from './Home.module.scss'
 import { motion } from 'framer-motion'
 
 // components
-import Navigation from 'components/Navigation/index';
-import Component from 'components/Component/index';
-
-
+import Navigation from 'components/Navigation/index.js'
+import Component from 'components/Component'
 
 const Home = () => {
   return (
@@ -20,12 +18,10 @@ const Home = () => {
         {/* content begins */}
 
         {/* navi */}
-        <Navigation/>
-        
+        <Navigation />
 
         {/* component example */}
-        <Component/>
-
+        <Component />
       </motion.div>
     </Suspense>
   )

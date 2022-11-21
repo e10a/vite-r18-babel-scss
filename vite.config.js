@@ -45,6 +45,17 @@ export default (args) => {
     },
     plugins: [react(), legacy(), mkcert(), svgr()],
     css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData(source, fp) {
+            // All scss files ending with imports.scss
+            // will not re-import additionalData
+            if (fp.endsWith('global.scss')) return source
+            // Use additionalData from legacy nuxt scss options
+            return `@import "styles/global.scss"; ${source}`
+          }
+        }
+      },
       modules: {
         generateScopedName,
         localsConvention: 'dashesOnly'
