@@ -1,0 +1,32 @@
+@import 'styles/global';
+
+.navigation {
+    $block: &;
+
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    
+    width: 100vw;
+    height: 60px;
+    background-color: $color-white;
+
+    &__logo {
+        width: 40px;
+        height: 40px;
+
+    }
+    
+    &__menu {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 60%;
+    }
+
+    &__item {
+        margin: 0 20px;
+    }
+}
