@@ -6,15 +6,11 @@
 @import 'sass-mq';
 
 
-// Variables
-// -----------------------------------------------------------------------------
-@import 'utils/variables';
-
-
 // Utils
 // -----------------------------------------------------------------------------
-@import 'utils/breakpoints';
 @import 'utils/functions';
+@import 'utils/variables';
+@import 'utils/breakpoints';
 @import 'utils/mixins';
 @import 'utils/transitions';
 @import 'utils/utilities';
