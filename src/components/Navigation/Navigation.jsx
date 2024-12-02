@@ -8,7 +8,6 @@ Navigation.propTypes = {
   routes: PropTypes.array
 }
 export default function Navigation({ routes }) {
-  console.log('Navigation:', routes)
   return (
     <div>
       <div className={styles.navigation__logo}>
@@ -17,7 +16,7 @@ export default function Navigation({ routes }) {
 
       <nav>
         <ul>
-          {routes.map(({ path, name }, index) => (
+          {routes.map(({ path }, index) => (
             <li key={index}>
               <NavLink
                 to={path}

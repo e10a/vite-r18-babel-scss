@@ -16,7 +16,6 @@ const routes = Object.keys(modules).map((filePath) => {
     .replace('./pages/', '') // Remove the base directory
     .replace('.jsx', '') // Remove the file extension
     .toLowerCase() // Convert to lowercase
-  console.log(routePath)
   return { path: routePath === 'home/home' ? '/' : `/${routePath}`, component: Component }
 })
 
