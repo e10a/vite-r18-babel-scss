@@ -1,9 +1,9 @@
 import React, { Suspense } from 'react'
-import styles from './Home.module.scss'
+// import styles from './Home.module.scss'
 import { motion } from 'framer-motion'
 
 // components
-import Navigation from 'components/Navigation/index.js'
+// import Navigation from 'components/Navigation/index.js'
 import Component from 'components/Component'
 
 const Home = () => {
@@ -18,7 +18,7 @@ const Home = () => {
         {/* content begins */}
 
         {/* navi */}
-        <Navigation />
+        {/* <Navigation /> */}
 
         {/* component example */}
         <Component />

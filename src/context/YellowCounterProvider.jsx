@@ -1,4 +1,5 @@
 import React, { createContext, useCallback, useContext, useState } from 'react'
+import PropTypes from 'prop-types'
 
 export const YellowCounterContext = createContext({
   value: 0,
@@ -17,6 +18,10 @@ export const YellowCounterProvider = ({ children }) => {
       {children}
     </YellowCounterContext.Provider>
   )
+}
+
+YellowCounterProvider.propTypes = {
+  children: PropTypes.node.isRequired
 }
 
 export function useYellowCounter() {

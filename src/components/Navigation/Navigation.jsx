@@ -1,24 +1,37 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import styles from './Navigation.module.scss'
 import { ReactComponent as ReactLogo } from 'assets/icons/react.svg'
+import PropTypes from 'prop-types'
 
-const Navigation = () => {
+Navigation.propTypes = {
+  routes: PropTypes.array
+}
+export default function Navigation({ routes }) {
+  console.log('Navigation:', routes)
   return (
-    <nav className={styles.navigation}>
+    <div>
       <div className={styles.navigation__logo}>
         <ReactLogo width="40px" height="40px" fill="black" />
       </div>
-      <div className={styles.navigation__menu}>
-        <Link to="/">
-          <p className={styles.navigation__item}>Home</p>
-        </Link>
-        <Link to="/dashboard">
-          <p className={styles.navigation__item}>Dashboard</p>
-        </Link>
-      </div>
-    </nav>
+
+      <nav>
+        <ul>
+          {routes.map(({ path, name }, index) => (
+            <li key={index}>
+              <NavLink
+                to={path}
+                style={({ isActive }) => ({
+                  fontWeight: isActive ? 'bold' : 'normal',
+                  textDecoration: isActive ? 'underline' : 'none'
+                })}
+              >
+                {path === '/' ? 'home' : path}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
   )
 }
-
-export default Navigation

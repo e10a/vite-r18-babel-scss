@@ -2,7 +2,7 @@ import { useLayoutEffect, useRef } from 'react'
 import { useTimeline } from 'hooks/animations/useTimeline'
 import { gsap } from 'gsap'
 
-export const animateSection = (playImmediately) => {
+export const animateSection = () => {
   const tl = useTimeline()
 
   const app2 = useRef()
